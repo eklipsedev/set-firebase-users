@@ -11,7 +11,7 @@ const firstNameUser = async user => {
 }
 
 const getUsers = async () => {
-    const querySnapshot = await users.where('email', '>=', 1000000).orderBy('email', 'asc').limit(10).get();
+    const querySnapshot = await users.where('email', '>=', 1000000).orderBy('email', 'desc').limit(10).get();
     let list = [];
     querySnapshot.forEach(doc => list.push({
       name: doc.id,
