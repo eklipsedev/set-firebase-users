@@ -120,7 +120,7 @@ const userUpdated = user => {
 }
 
 const userRemoved = name => {
-    $('#' + user.name).remove();
+    $('#' + name).remove();
 }
 
 const updateUser = (user, firstName) => {
