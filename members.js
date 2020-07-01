@@ -148,17 +148,17 @@ const updateUser = (user, firstName) => {
 
 const deleteUser = user => {
     $('.delete-user').hide();
-    $('.confirm-delete').hide();
+    $('.cancel-delete').hide();
     users.doc(user).delete()
     .then(function() {
             console.log('successfully deleted user');
             $('.delete-user').show();
-            $('.confirm-delete').show();
+            $('.cancel-delete').show();
             $('.delete-user').parents('.users-row').remove();
           })
           .catch(function() {
             console.log('could not delete the user');
             $('.delete-user').show();
-            $('.confirm-delete').show();
+            $('.cancel-delete').show();
           });
 }
