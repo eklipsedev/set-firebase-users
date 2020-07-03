@@ -82,7 +82,7 @@ var renderLottie = function () {
            + `${user.email}` + 
            '</span>? This cannot be undone.</div><div class="modal-btn-container"><div class="login-btn__wrapper"><div id="loginAnimation" class="btn login lottie">'
            + renderLottie + 
-           '</div><a href="#" class="btn delete-user w-button" target="_blank" rel="noreferrer">Delete</a></div><a href="#" class="btn secondary cancel-delete w-button" target="_blank" rel="noreferrer">Cancel</a></div></div></div>
+           '</div><a href="#" class="btn delete-user w-button" target="_blank" rel="noreferrer">Delete</a></div><a href="#" class="btn secondary cancel-delete w-button" target="_blank" rel="noreferrer">Cancel</a></div></div></div>'
        );
      },
      renderUserRow = function() {
