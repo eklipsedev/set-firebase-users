@@ -100,7 +100,6 @@ var renderLottie = function () {
        );
      };
 
-
   $(renderUpdateModal).each(function() {
     var adminVal = $('input[value=admin]').val();
     var nonAdminVal = $('input[value=nonadmin]').val();
