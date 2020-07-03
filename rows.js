@@ -200,4 +200,4 @@ const deleteUser = user => {
             $('.delete-user').show();
             $('.cancel-delete').show();
           });
-}
+};
