@@ -30,7 +30,7 @@ users.onSnapshot(snapshot => {
                 userAdded({
                   name: change.doc.id,
                   firstName: change.doc.data().firstName,
-                  lastName: change.doc.data().lastName, 
+                  lastName: change.doc.data().lastName,
                   email: change.doc.data().email,
                   role: change.doc.data().role
                 });
@@ -39,7 +39,7 @@ users.onSnapshot(snapshot => {
                 userUpdated({
                   name: change.doc.id,
                   firstName: change.doc.data().firstName,
-                  lastName: change.doc.data().lastName, 
+                  lastName: change.doc.data().lastName,
                   email: change.doc.data().email,
                   role: change.doc.data().role
                 });
@@ -64,14 +64,14 @@ var renderLottie = function () {
     //create update modal
     renderUpdateModal = function() {
         return (
-            '<div class="update-modal"><div class="update-modal-container"><div id="createUserForm" class="create-user-form w-form"><form id="Create-User-Form" name="wf-form-Create-User-Form" data-name="Create User Form"><div class="update__header"><h2 class="heading">Update member</h2><p class="email__support">Since you are an admin, you have been granted permission to update users within your system.</p></div><div class="form__row"><div class="form__row-half"><input type="text" class="form__text-field w-input" maxlength="256" name="firstNameNewUser" data-name="First Name New User" value=' 
+            '<div class="update-modal"><div class="update-modal-container"><div id="createUserForm" class="create-user-form w-form"><form id="Create-User-Form" name="wf-form-Create-User-Form" data-name="Create User Form"><div class="update__header"><h2 class="heading">Update member</h2><p class="email__support">Since you are an admin, you have been granted permission to update users within your system.</p></div><div class="form__row"><div class="form__row-half"><input type="text" class="form__text-field w-input" maxlength="256" name="firstNameNewUser" data-name="First Name New User" value='
             + `${user.firstName}` +
             ' required=""></div><div class="form__row-half"><input type="text" class="form__text-field w-input" maxlength="256" name="lastNameNewUser" data-name="Last Name New User" value='
             + `${user.lastName}` +
             ' required=""></div></div><div class="form__row"><input type="email" class="form__text-field w-input" maxlength="256" name="emailNewUser" data-name="Email New User" value='
             + `${user.email}` +
             ' required=""></div><div class="user-role-text">User Role*:</div><div class="user-roles"><label class="radio-btn-field w-radio"><div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-btn w-radio-input"></div><input type="radio" data-name="Role" id="admin" name="Role" value="admin" required="" style="opacity:0;position:absolute;z-index:-1"><span id="Admin" for="admin" class="w-form-label">Purchase Access</span></label><label class="radio-btn-field w-radio"><div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-btn w-radio-input"></div><input type="radio" data-name="Role" id="nonadmin" name="Role" value="nonadmin" required="" style="opacity:0;position:absolute;z-index:-1"><span for="nonadmin" class="radio-btn-label w-form-label">No Purchase Access</span></label></div><div class="modal-btn-container"><div class="login-btn__wrapper"><div class="btn login lottie">'
-            + renderLottie + 
+            + renderLottie +
             '</div><a href="#" class="btn update-user w-button" target="_blank" rel="noreferrer">Update User</a></div><a href="#" class="btn secondary cancel-update w-button" target="_blank" rel="noreferrer">Cancel</a></div></form><div class="success-message w-form-done"><div>Thank you! Your submission has been received!</div></div><div class="w-form-fail"><div id="alertStatusUserCreation">Oops! Something went wrong while submitting the form.</div></div></div></div></div>'
          );
      },
@@ -79,23 +79,23 @@ var renderLottie = function () {
      renderDeleteModal = function() {
        return (
            '<div class="delete-modal"><div class="delete-modal-container"><div>Are you sure you want to delete <span id="email-in-modal" class="text-span">'
-           + `${user.email}` + 
+           + `${user.email}` +
            '</span>? This cannot be undone.</div><div class="modal-btn-container"><div class="login-btn__wrapper"><div id="loginAnimation" class="btn login lottie">'
-           + renderLottie + 
+           + renderLottie +
            '</div><a href="#" class="btn delete-user w-button" target="_blank" rel="noreferrer">Delete</a></div><a href="#" class="btn secondary cancel-delete w-button" target="_blank" rel="noreferrer">Cancel</a></div></div></div>'
        );
      },
      renderUserRow = function() {
        return (
            '<div class="users-row"><div class="users-info"><div class="users-name"><span class="users-firstname">'
-           + `${user.firstName}` + 
+           + `${user.firstName}` +
            '</span> <span class="users-lastname">'
-           + `${user.lastName}` + 
+           + `${user.lastName}` +
            '</span></div><div class="users-email">'
            + `${user.email}` +'</div><div class="users-id">'
-           + `${user.id}` + 
+           + `${user.id}` +
            '</div><div class="users-role">Purchase Access</div><div class="created-date">Created: <strong class="created">'
-           + `${user.timestamp}` + 
+           + `${user.timestamp}` +
            '</strong></div></div><div class="users-actions"><a href="#" class="btn update w-button" target="_blank" rel="noreferrer">Update</a><a href="#" class="btn delete w-button" target="_blank" rel="noreferrer">Delete</a></div></div>'
        );
      };
@@ -118,11 +118,11 @@ var renderLottie = function () {
       $(admin).siblings('.w-form-formradioinput').removeClass('w--redirected-checked');
     } else {
       console.log('no value has been assigned to the user');
-    }     
+    }
   });
 
-  
-  //open delete modal and set props equal to each row   
+
+  //open delete modal and set props equal to each row
   $('.delete').click(function() {
     var e = $(this).siblings(".delete-modal");
     e.show();
@@ -133,11 +133,11 @@ var renderLottie = function () {
   $('.cancel-delete').click(function() {
     $(this).parents(".delete-modal").hide();
   });
-  
+
   //trigger update modal and its actions
   $('.update').click(function() {
     var e = $(this).siblings(".update-modal");
-    e.show();  
+    e.show();
   })
   $('.update-user').click(function(){
     updateUser(user.name, user.firstName);
@@ -146,13 +146,14 @@ var renderLottie = function () {
   $('.cancel-update').click(function() {
     $(".update-modal").hide();
   });
-  
+
   //append items dynamically
-  $(usersDiv).append(renderUserRow);
+  $(usersDiv).append(renderUserRow;
   $(userRow).append([
     renderUpdateModal,
     renderDeleteModal
   ]);
+};
 
 const userUpdated = user => {
     $('#' + user.name).text(`${user.name}`);
