@@ -70,8 +70,8 @@ var renderLottie = function () {
             + `${user.lastName}` +
             ' required=""></div></div><div class="form__row"><input type="email" class="form__text-field w-input" maxlength="256" name="emailNewUser" data-name="Email New User" value='
             + `${user.email}` +
-            ' required=""></div><div class="user-role-text">User Role*:</div><div class="user-roles"><label class="radio-btn-field w-radio"><div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-btn w-radio-input"></div><input type="radio" data-name="Role" id="admin" name="Role" value="admin" required="" style="opacity:0;position:absolute;z-index:-1"><span id="Admin" for="admin" class="w-form-label">Purchase Access</span></label><label class="radio-btn-field w-radio"><div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-btn w-radio-input"></div><input type="radio" data-name="Role" id="nonadmin" name="Role" value="nonadmin" required="" style="opacity:0;position:absolute;z-index:-1"><span for="nonadmin" class="radio-btn-label w-form-label">No Purchase Access</span></label></div><div class="modal-btn-container"><div class="login-btn__wrapper"><div id="loginAnimation" class="btn login lottie">'
-            + renderLottie + 
+            ' required=""></div><div class="user-role-text">User Role*:</div><div class="user-roles"><label class="radio-btn-field w-radio"><div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-btn w-radio-input"></div><input type="radio" data-name="Role" id="admin" name="Role" value="admin" required="" style="opacity:0;position:absolute;z-index:-1"><span id="Admin" for="admin" class="w-form-label">Purchase Access</span></label><label class="radio-btn-field w-radio"><div class="w-form-formradioinput w-form-formradioinput--inputType-custom radio-btn w-radio-input"></div><input type="radio" data-name="Role" id="nonadmin" name="Role" value="nonadmin" required="" style="opacity:0;position:absolute;z-index:-1"><span for="nonadmin" class="radio-btn-label w-form-label">No Purchase Access</span></label></div><div class="modal-btn-container"><div class="login-btn__wrapper"><div class="btn login lottie">'
+            + renderLottie() + 
             '</div><a href="#" class="btn update-user w-button" target="_blank" rel="noreferrer">Update User</a></div><a href="#" class="btn secondary cancel-update w-button" target="_blank" rel="noreferrer">Cancel</a></div></form><div class="success-message w-form-done"><div>Thank you! Your submission has been received!</div></div><div class="w-form-fail"><div id="alertStatusUserCreation">Oops! Something went wrong while submitting the form.</div></div></div></div></div>'
          );
      },
@@ -81,7 +81,7 @@ var renderLottie = function () {
            '<div class="delete-modal"><div class="delete-modal-container"><div>Are you sure you want to delete <span id="email-in-modal" class="text-span">'
            + `${user.email}` + 
            '</span>? This cannot be undone.</div><div class="modal-btn-container"><div class="login-btn__wrapper"><div id="loginAnimation" class="btn login lottie">'
-           + renderLottie + 
+           + renderLottie() + 
            '</div><a href="#" class="btn delete-user w-button" target="_blank" rel="noreferrer">Delete</a></div><a href="#" class="btn secondary cancel-delete w-button" target="_blank" rel="noreferrer">Cancel</a></div></div></div>'
        );
      },
